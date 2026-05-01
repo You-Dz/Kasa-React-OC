@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 2em;
+    align-items: center;
+}
+.header-logo {
+    display: flex;
+    align-items: center;
+    .logo-door {
+
+    transform: translateX(-16px) translateY(15px);
+    }
+}
+
+.header-nav{
+    display: flex;
+    gap: 10px;
+}
+.nav-link{
+    text-decoration: none;
+    color: black;
+}

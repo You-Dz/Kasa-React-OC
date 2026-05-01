@@ -1,0 +1,15 @@
+.footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .logo-door {
+        transform: translateX(-9px) translateY(7px);
+    }
+}
