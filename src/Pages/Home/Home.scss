@@ -1,39 +1,49 @@
 $shadow : 0 10px 25px rgba(0, 0, 0, 0.6);
-$colorBlack : #0000;
+$colorBlack : #000;
 
 .home-content {
     margin: 2em 5em;
-}
-.banner {
-    position: relative;
 
-    .banner-slogan {
-        position: absolute;
-        inset: 0;
-        z-index: 2;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        font-size: 48px;
-        font-weight: 700;
-        -webkit-text-stroke: 1px $colorBlack;
-    }
-    .overlay {
-        position: absolute;
-        z-index: 1;
-        inset: 0;
-        border-radius: 20px;
-        background: rgba(0, 0, 0, 0.4);
-    }
-    .banner-img {
+    .banner {
         width: 100%;
-        height: 223px;
-        object-fit: cover;
+        position: relative;
+        overflow: hidden;
         border-radius: 20px;
-        box-shadow: $shadow
+        box-shadow: $shadow;
 
-    }
+        .banner-slogan {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 48px;
+            font-weight: 700;
+            text-shadow:
+                -1px -1px 0 $colorBlack,
+                1px -1px 0 $colorBlack,
+                -1px  1px 0 $colorBlack,
+                1px  1px 0 $colorBlack;
+            }
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+            border-radius: inherit;
+            pointer-events: none;
+        }
+        .banner-img {
+            display: block;
+            width: 100%;
+            z-index: 0;
+            height: 223px;
+            object-fit: cover;
+            border-radius:inherit;
+        }
 }
 
 .gallery {
@@ -44,4 +54,5 @@ $colorBlack : #0000;
     background-color: #F6F6F6;
     padding: 2em;
     border-radius: 20px;
+}
 }

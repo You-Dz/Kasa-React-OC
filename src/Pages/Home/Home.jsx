@@ -7,7 +7,6 @@ function Home () {
         <main className="home-content">
             <div className="banner">
                 <img src={bannerImg} className="banner-img" alt="Paysage de falaise en bord de mer"/>
-                <div className="overlay"></div>
                 <p className="banner-slogan">Chez vous, partout et ailleurs</p>
             </div>
             <div className="gallery">
