@@ -1,0 +1,33 @@
+.housing-collapse {
+    align-items: center;
+    width: 100%;
+    .collapse-header {
+        width: 100%;
+        display:flex ;
+        justify-content: space-between;
+        align-items: center;
+        background-color:#FF6060 ;
+        font-size: 24px;
+        color: white;
+        padding: 10px;
+        border-radius: 10px 10px 5px 5px;
+        border: none;
+        .collapse-icon{
+            transition: transform 0.3s ease;
+        }
+        .rotate {
+            transform: rotate(180deg);
+        }
+    }
+    .collapse-content {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+        font-size: 18px;
+    }
+    .unveil {
+        max-height: 500px;
+        opacity: 1;
+    }
+}

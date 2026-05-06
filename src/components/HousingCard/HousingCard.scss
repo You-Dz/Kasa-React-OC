@@ -1,0 +1,79 @@
+.housing-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    .housing-card-main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+        width: 100%;
+
+        .rightside{
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            align-items: center;
+            gap: 20px;
+
+            .host{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+
+                .host-img{
+                    width: 64px;
+                    height: 64px;
+                    border-radius: 50%;
+                }
+            }
+
+            .notation{
+                display: flex;
+                gap: 20px;
+            }
+        }
+
+        .leftside {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .tags-row{
+                display: flex;
+                gap: 20px;
+
+                .tags{
+                    color: white;
+                    background-color: red;
+                    border-radius: 20px;
+                    padding:8px 16px;
+                }
+            }
+        }
+    }
+    .housing-card-footer{
+        display: flex;
+        flex: 1;
+        gap: 20px;
+        width: 100%;
+
+        .collapse-description {
+            flex: 1;
+            display: flex;
+            justify-content: flex-start; /* aligné à gauche */
+        }
+
+        .collapse-equipment {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end; /* aligné à droite */
+        }
+    }
+}
+    
+    

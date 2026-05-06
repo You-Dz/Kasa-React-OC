@@ -1,6 +1,7 @@
 import data from"../../datas/housing.json"
 import HousingCard from "../../components/HousingCard/HousingCard"
 import { useParams } from "react-router-dom"
+import "./Housing.scss"
 
 function Housing () {
     const {id} = useParams()

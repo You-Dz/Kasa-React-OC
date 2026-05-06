@@ -5,6 +5,27 @@ $colorBlack:#000;
     border-radius: 10px;
     overflow: hidden;
     aspect-ratio: 1 / 1;
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 50%,
+            rgba(0, 0, 0, 0.5) 100%
+            );
+        z-index: 1;
+        border-radius: inherit;
+        pointer-events: none;
+    }
+    &:hover::after {
+        background:linear-gradient(
+            to bottom,
+            rgba(0,0,0,0) 50%,
+            rgba(0,0,0,0.7) 100%
+            
+        );
+    }
     .home-card-img {
         width: 100%;
         height: 100%;
@@ -18,10 +39,5 @@ $colorBlack:#000;
         right: 10px;
         color: white;
         z-index: 2;
-        text-shadow:
-            -1px -1px 0 $colorBlack,
-            1px -1px 0 $colorBlack,
-            -1px  1px 0 $colorBlack,
-            1px  1px 0 $colorBlack;
     }
 }

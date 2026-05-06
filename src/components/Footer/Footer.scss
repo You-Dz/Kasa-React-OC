@@ -11,7 +11,5 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    .logo-door {
-        transform: translateX(-9px) translateY(7px);
-    }
+    gap: 2px;
 }

@@ -1,8 +1,7 @@
-import IconK from "../../assets/icons/iconK-header.svg";
-import IconHouse from "../../assets/icons/iconHouse-header.svg";
-import IconDoor from "../../assets/icons/iconDoor-header.svg";
-import IconS from "../../assets/icons/iconS-header.svg";
-import IconA from "../../assets/icons/iconA-header.svg";
+import IconK from "../../assets/icons/IconK-header.svg";
+import IconHouse from "../../assets/icons/IconHouse-header.svg";
+import IconS from "../../assets/icons/IconS-header.svg";
+import IconA from "../../assets/icons/IconA-header.svg";
 import { NavLink } from "react-router-dom";
 import "./Header.scss"
 
@@ -14,7 +13,6 @@ function Header () {
             <h1 hidden>Kasa</h1>
             <img src={IconK} alt="Logo Kasa" />
             <img src={IconHouse} alt="Logo Kasa" />
-            <img src={IconDoor} className="logo-door" alt="Logo Kasa" />
             <img src={IconS} alt="Logo Kasa" />
             <img src={IconA} alt="Logo Kasa" />
         </div>

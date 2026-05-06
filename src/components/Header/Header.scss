@@ -1,15 +1,12 @@
 .header {
     display: flex;
     justify-content: space-between;
-    margin: 38px 50px;
+    margin: 30px 120px;
     align-items: center;
     .header-logo {
         display: flex;
         align-items: center;
-        .logo-door {
-    
-        transform: translateX(-16px) translateY(15px);
-        }
+        gap: 2px;
     }
     .header-nav{
         display: flex;
