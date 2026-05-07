@@ -27,6 +27,8 @@
         opacity: 0;
         overflow: hidden;
         transition: max-height 0.3s ease, opacity 0.3s ease;
+        background: v.$color-bg-grey;
+        padding: v.$spacing-xs;
     }
     
     .unveil {

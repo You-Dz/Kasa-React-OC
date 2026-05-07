@@ -17,6 +17,9 @@
             text-decoration: none;
             color: v.$color-black;
             font-size: v.$font-size-me;
+            @media(max-width:v.$bp-mobile){
+                font-size: v.$font-size-sm;
+            }
         }
         .active{
             text-decoration: underline;

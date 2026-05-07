@@ -4,4 +4,8 @@
     display: block;
     width: v.$font-size-lg;
     height: v.$font-size-lg;
+    @media (max-width:v.$bp-mobile){
+        width: v.$font-size-body;
+        height: v.$font-size-body;
+    }
 }
