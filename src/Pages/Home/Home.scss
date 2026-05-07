@@ -1,58 +1,62 @@
-$shadow : 0 10px 25px rgba(0, 0, 0, 0.6);
-$colorBlack : #000;
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
 
 .home-content {
-    margin: 30px 0px;
+    padding: v.$spacing-md 0px;
 
     .banner {
         width: 100%;
         position: relative;
         overflow: hidden;
-        border-radius: 20px;
-        box-shadow: $shadow;
+        border-radius: v.$radius-md;
+        box-shadow: v.$shadow;
 
         .banner-slogan {
             position: absolute;
             inset: 0;
             z-index: 2;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
+            @include m.flex-row(center,center);
+            color: v.$color-white;
             font-size: 48px;
             font-weight: 700;
             text-shadow:
-                -1px -1px 0 $colorBlack,
-                1px -1px 0 $colorBlack,
-                -1px  1px 0 $colorBlack,
-                1px  1px 0 $colorBlack;
+                -1px -1px 0 v.$color-black,
+                1px -1px 0 v.$color-black,
+                -1px  1px 0 v.$color-black,
+                1px  1px 0 v.$color-black;
+
+            @media (max-width: v.$bp-mobile) {
+            font-size: v.$font-size-me;
             }
+        }
         &::after {
             content: "";
             position: absolute;
             inset: 0;
-            background: rgba(0, 0, 0, 0.5);
+            background: v.$overlay-dark;
             z-index: 1;
             border-radius: inherit;
             pointer-events: none;
         }
         .banner-img {
-            display: block;
-            width: 100%;
+            @include m.img-cover;
             z-index: 0;
             height: 223px;
-            object-fit: cover;
             border-radius:inherit;
         }
-}
+    }
 
-.gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap:40px;
-    margin-top: 40px;
-    background-color: #F6F6F6;
-    padding: 60px;
-    border-radius: 20px;
-}
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: v.$spacing-lg;
+        margin-top: v.$spacing-lg;
+        background-color: v.$color-bg-grey;
+        padding: 60px;
+        border-radius: v.$radius-md;
+        @media (max-width:v.$bp-mobile){
+            grid-template-columns: 1fr;
+        }
+    }
+
 }

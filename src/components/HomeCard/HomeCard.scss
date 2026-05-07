@@ -1,8 +1,8 @@
-$mainColor: #FF6060;
-$colorBlack:#000;
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
 .home-card {
     position: relative;
-    border-radius: 10px;
+    border-radius: v.$radius-sm;
     overflow: hidden;
     aspect-ratio: 1 / 1;
     &::after {
@@ -11,8 +11,8 @@ $colorBlack:#000;
         inset: 0;
         background: linear-gradient(
             to bottom,
-            rgba(0, 0, 0, 0) 50%,
-            rgba(0, 0, 0, 0.5) 100%
+            v.$overlay-gradient-base 50%,
+            v.$overlay-dark 100%
             );
         z-index: 1;
         border-radius: inherit;
@@ -21,23 +21,22 @@ $colorBlack:#000;
     &:hover::after {
         background:linear-gradient(
             to bottom,
-            rgba(0,0,0,0) 50%,
-            rgba(0,0,0,0.7) 100%
+            v.$overlay-gradient-base,
+            v.$overlay-dark-hover 100%
             
         );
     }
     .home-card-img {
-        width: 100%;
         height: 100%;
-        object-fit: cover;
-        display: block;
+        @include m.img-cover;
     }
     .home-card-title {
         position: absolute;
-        bottom: 10px;
-        left: 10px;
-        right: 10px;
-        color: white;
+        bottom: v.$spacing-xs;
+        left: v.$spacing-xs;
+        right: v.$spacing-xs;
+        color: v.$color-white;
         z-index: 2;
+        font-size:v.$font-size-body;
     }
 }

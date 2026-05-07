@@ -5,7 +5,6 @@ import Housing from './Pages/Housing/Housing'
 import About from './Pages/About/About'
 import Error from './Pages/Error/Error'
 
-import './App.scss'
 
 function App() {
 

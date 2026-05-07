@@ -13,7 +13,7 @@ function Footer () {
             <img src={IconS} alt="Logo Kasa" />
             <img src={IconA} alt="Logo Kasa" />
         </div>
-        <p>© 2020 Kasa. All rights reserved </p>
+        <p>© 2020 Kasa. All <span className="footer-break">rights reserved</span></p>
     </footer>    
     )
 }

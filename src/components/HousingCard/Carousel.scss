@@ -1,0 +1,58 @@
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
+
+.carousel{
+    position: relative;
+    border-radius: v.$radius-md;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    max-height: 900px;
+    width: 100%;
+
+    @keyframes slideFromRight {
+        from { transform: translateX(100%); opacity: 0; }
+        to   { transform: translateX(0);    opacity: 1; }
+    }
+
+    @keyframes slideFromLeft {
+        from { transform: translateX(-100%); opacity: 0; }
+        to   { transform: translateX(0);     opacity: 1; }
+    }
+    .carousel-img{
+        @include m.img-cover;
+        object-position:center;
+        height: 100%;
+        &.slide-left  { animation: slideFromRight 0.3s ease; }
+        &.slide-right { animation: slideFromLeft  0.3s ease; }
+    }
+
+    .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: v.$overlay-gradient-base;
+        transition: background 0.3s;
+        border-radius: v.$radius-sm;
+        border:none;
+        padding: v.$spacing-xs;
+        &:hover {
+            background: v.$overlay-dark;
+        }
+    }
+
+    .left-btn{
+        left: 0;
+    }
+
+    .right-btn{
+        right: 0;
+    }
+    
+    .carousel-counter {
+        position: absolute;
+        bottom: v.$spacing-xs;
+        left:50%;
+        transform: translateX(-50%);
+        color: v.$color-white;
+    }
+}

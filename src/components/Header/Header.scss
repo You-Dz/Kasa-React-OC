@@ -1,20 +1,22 @@
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
+
 .header {
-    display: flex;
-    justify-content: space-between;
-    margin: 30px 120px;
-    align-items: center;
+
+    @include m.flex-row(space-between,center);
+    padding: v.$spacing-md clamp(v.$spacing-sm, 5vw, v.$spacing-xl);
+
     .header-logo {
-        display: flex;
-        align-items: center;
+        @include m.flex-row(flex-start,center);
         gap: 2px;
     }
     .header-nav{
         display: flex;
-        gap: 57px;
+        gap: clamp(v.$spacing-sm, 5vw , 57px);
         .nav-link{
             text-decoration: none;
-            color: black;
-            font-size: 24px;
+            color: v.$color-black;
+            font-size: v.$font-size-me;
         }
         .active{
             text-decoration: underline;

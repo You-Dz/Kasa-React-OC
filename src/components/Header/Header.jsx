@@ -1,8 +1,8 @@
+import { NavLink } from "react-router-dom";
 import IconK from "../../assets/icons/IconK-header.svg";
 import IconHouse from "../../assets/icons/IconHouse-header.svg";
 import IconS from "../../assets/icons/IconS-header.svg";
 import IconA from "../../assets/icons/IconA-header.svg";
-import { NavLink } from "react-router-dom";
 import "./Header.scss"
 
 

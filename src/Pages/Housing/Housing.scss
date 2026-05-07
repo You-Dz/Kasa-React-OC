@@ -1,6 +1,6 @@
+@use "../../styles/mixins" as m;
+
 .housing-content {
-    // margin: 30px 120px;
-    display: flex;flex-direction: column;
-    justify-content: center;
+    @include m.flex-col(center,center);
     min-width: 0;
 }

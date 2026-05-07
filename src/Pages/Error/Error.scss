@@ -1,20 +1,29 @@
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
 .error-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include m.flex-col(center,center);
     gap: 50px;
-    margin-top: 100px;
+    padding-top: v.$spacing-xl;
     .error-title {
         font-size: 248px;
+        color:v.$color-primary;
+        @media(max-width: v.$bp-mobile){
+            font-size: 96px;
+        }
     }
     .error-quote{
-        font-size: 36px;
+        font-size: v.$font-size-lg;
+        color:v.$color-primary;
+        @media(max-width: v.$bp-mobile){
+            font-size: v.$font-size-body;
+        }
     }
     .error-link{
-        color: black;
-        margin-top: 20px;
-        margin-bottom: 100px;
-        font-size: 18px ;
+        color: v.$color-black;
+        padding-top: v.$spacing-sm;
+        padding-bottom: v.$spacing-xl;
+        @media(max-width: v.$bp-mobile){
+            font-size: v.$font-size-sm;
+        }
     }
 }

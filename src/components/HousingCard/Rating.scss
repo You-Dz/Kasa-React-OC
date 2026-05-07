@@ -1,0 +1,7 @@
+@use "../../styles/variables" as v;
+
+.star {
+    display: block;
+    width: v.$font-size-lg;
+    height: v.$font-size-lg;
+}

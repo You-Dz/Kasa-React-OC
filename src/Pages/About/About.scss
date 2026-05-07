@@ -1,39 +1,35 @@
-$shadow : 0 10px 25px rgba(0, 0, 0, 0.6);
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
+
 .about-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 30px 0px;
-    gap: 30px;
+    @include m.flex-col;
+    padding: v.$spacing-md 0px;
+    gap: v.$spacing-md;
     .about-banner{
         width: 100%;
         position: relative;
         overflow: hidden;
-        border-radius: 20px;
-        box-shadow: $shadow;
+        border-radius: v.$radius-md;
+        box-shadow: v.$shadow;
         &::after {
             content: "";
             position: absolute;
             inset: 0;
-            background: rgba(0, 0, 0, 0.5);
+            background: v.$overlay-dark;
             z-index: 1;
             border-radius: inherit;
             pointer-events: none;
         }
         .about-banner-img {
-            display: block;
-            width: 100%;
+            @include m.img-cover;
             z-index: 0;
             height: 223px;
-            object-fit: cover;
             border-radius:inherit;
         }
     }
     .about-collapse {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
+        padding: 0 clamp(0px, calc(100vw - 768px), 120px);
+        @include m.flex-col;
+        gap: v.$spacing-md;
     }
 }

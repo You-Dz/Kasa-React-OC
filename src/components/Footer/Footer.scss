@@ -1,15 +1,21 @@
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
+
 .footer {
-    background-color: black;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px;
-    gap:20px ;
-}
-.footer-logo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 2px;
+    background-color: v.$color-black;
+    color: v.$color-white;
+    @include m.flex-col(center,center);
+    padding: 60px;
+    min-height: 209px;
+    gap:v.$spacing-sm ;
+    .footer-logo {
+        @include m.flex-row;
+        gap: 2px;
+    }
+    .footer-break {
+        display: inline;
+        @media (max-width: v.$bp-mobile){
+            display: block;
+        }
+    }
 }

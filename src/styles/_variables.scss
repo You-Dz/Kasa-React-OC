@@ -1,0 +1,35 @@
+//colors
+$color-primary:#FF6060;
+$color-black:#000000;
+$color-white:#FFFFFF;
+$color-bg-grey:#F6F6F6;
+
+//overlay
+$overlay-gradient-base:rgba(0, 0, 0, 0);
+$overlay-dark:rgba(0, 0, 0, 0.5);
+$overlay-dark-hover:rgba(0, 0, 0, 0.7);
+
+//shadow
+$shadow:0 10px 25px rgba(0,0,0,0.6);
+
+//espacement récurrent
+$spacing-xs: 10px;
+$spacing-sm: 20px;
+$spacing-md: 30px;
+$spacing-lg:40px;
+$spacing-xl: 120px;
+
+//radius
+$radius-md: 20px;
+$radius-sm: 10px;
+
+//typographie
+$font-main: "Montserrat", sans-serif;
+$font-size-xs:10px;
+$font-size-sm: 14px;
+$font-size-body: 18px;
+$font-size-me: 24px;
+$font-size-lg: 36px;
+
+//responsive breakpoint
+$bp-mobile:768px;

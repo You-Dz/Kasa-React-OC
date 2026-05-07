@@ -1,79 +1,122 @@
+@use "../../styles/variables" as v;
+@use "../../styles/mixins" as m;
+
 .housing-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include m.flex-col(center,center);
     width: 100%;
     box-sizing: border-box;
+
     .housing-card-main {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 20px;
+        @include m.flex-row(space-between,center);
+        padding-top: v.$spacing-sm;
+        padding-bottom: v.$spacing-sm;
         width: 100%;
 
-        .rightside{
-            display: flex;
-            flex-direction: column;
-            justify-items: center;
-            align-items: center;
-            gap: 20px;
-
-            .host{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 20px;
-
-                .host-img{
-                    width: 64px;
-                    height: 64px;
-                    border-radius: 50%;
-                }
-            }
-
-            .notation{
-                display: flex;
-                gap: 20px;
-            }
+        @media (max-width:v.$bp-mobile) {
+            @include m.flex-col(flex-start,flex-start);
         }
 
         .leftside {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: v.$spacing-sm;
 
-            .tags-row{
+            @media (max-width:v.$bp-mobile) {
+                @include m.flex-col(flex-start,flex-start);
+            }
+
+            .housing-card-title {
+                font-size: v.$font-size-lg;
+                color: v.$color-primary;
+
+                @media (max-width:v.$bp-mobile) {
+                    font-size: v.$font-size-body;
+                }
+            }
+
+            .location {
+                @media (max-width:v.$bp-mobile) {
+                    font-size: v.$font-size-sm;
+                }
+            }
+
+            .tags-row {
                 display: flex;
-                gap: 20px;
+                gap: v.$spacing-sm;
 
-                .tags{
-                    color: white;
-                    background-color: red;
-                    border-radius: 20px;
-                    padding:8px 16px;
+                .tags {
+                    color: v.$color-white;
+                    font-size: v.$font-size-sm;
+                    background-color: v.$color-primary;
+                    border-radius: v.$radius-md;
+                    padding: 8px 16px;
+
+                    @media (max-width:v.$bp-mobile) {
+                        font-size: v.$font-size-xs;
+                    }
                 }
             }
         }
-    }
-    .housing-card-footer{
+
+        .rightside {
+            @include m.flex-col(flex-start,center);
+            gap: v.$spacing-md;
+
+            @media (max-width:v.$bp-mobile) {
+                @include m.flex-row(space-between);
+                width: 100%;
+            }
+
+            .host {
+                @include m.flex-row(center,center);
+                gap: v.$spacing-sm;
+
+                @media (max-width:v.$bp-mobile) {
+                    order: 2;
+                }
+
+                .host-img {
+                    width: clamp(32px, 5vw, 64px);
+                    height: clamp(32px, 5vw, 64px);
+                    border-radius: 50%;
+                }
+            }
+
+            .notation {
+                display: flex;
+                gap: v.$spacing-sm;
+
+                @media (max-width:v.$bp-mobile) {
+                    order: 1;
+                }
+            }
+        }
+    } 
+    .housing-card-footer {
         display: flex;
         flex: 1;
-        gap: 20px;
+        gap: v.$spacing-sm;
         width: 100%;
+
+        @media (max-width:v.$bp-mobile) {
+            @include m.flex-col;
+        }
 
         .collapse-description {
             flex: 1;
             display: flex;
-            justify-content: flex-start; /* aligné à gauche */
+            justify-content: flex-start;
         }
 
         .collapse-equipment {
             flex: 1;
             display: flex;
-            justify-content: flex-end; /* aligné à droite */
+            justify-content: flex-end;
+
+            @media (max-width:v.$bp-mobile) {
+                justify-content: flex-start;
+                width: 100%;
+            }
         }
     }
 }
-    
-    

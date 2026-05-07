@@ -1,0 +1,43 @@
+@use "./variables" as v;
+
+// Flex row : justify(horizontal) | align(vertical)
+@mixin flex-row($justify: flex-start, $align: center) {
+    display: flex;
+    flex-direction: row;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+// Flex col : justify(vertical) | align(horizontal)
+@mixin flex-col($justify: flex-start, $align: center) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+
+// Banner/image avec overlay 
+@mixin banner-overlay {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: v.$radius-md;
+    box-shadow: v.$shadow;
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: v.$overlay-dark;
+        z-index: 1;
+        border-radius: inherit;
+        pointer-events: none;
+    }
+}
+
+// Image full cover
+@mixin img-cover {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}

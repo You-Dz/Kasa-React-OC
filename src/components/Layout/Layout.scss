@@ -1,3 +1,4 @@
+@use "../../styles/variables" as v;
 .layout {
   display: flex;
   flex-direction: column;
@@ -6,5 +7,5 @@
 .layout-content {
   min-width: 0;
   width: 100%;
-  padding: 30px 120px;
+  padding: clamp(v.$spacing-xs, 2vw, v.$spacing-md) clamp(v.$spacing-sm, 5vw, v.$spacing-xl);
 }

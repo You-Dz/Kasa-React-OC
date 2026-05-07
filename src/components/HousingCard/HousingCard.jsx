@@ -1,5 +1,5 @@
 import Rating from "./Rating"
-import Carrousel from "./Carrousel"
+import Carousel from "./Carousel"
 import HousingCollapse from "./HousingCollapse"
 import "./HousingCard.scss"
 
@@ -7,9 +7,7 @@ function HousingCard ({data}) {
 
     return (
         <article className="housing-card">
-            <>
-                <Carrousel pictures={data.pictures}/>
-            </>
+                <Carousel pictures={data.pictures}/>
             <div className="housing-card-main">
                 <div className="leftside">
                     <h2 className="housing-card-title">{data.title}</h2>
