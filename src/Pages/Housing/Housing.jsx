@@ -1,6 +1,8 @@
 import { useParams, Navigate } from "react-router-dom"
-import HousingCard from "../../components/HousingCard/HousingCard"
-import data from"../../datas/housing.json"
+import Carousel from "../../components/Carousel/Carousel"
+import Rating from "../../components/Rating/Rating"
+import Collapse from "../../components/Collapse/Collapse"
+import data from "../../data/housing.json"
 import "./Housing.scss"
 
 function Housing () {
@@ -10,9 +12,37 @@ function Housing () {
     if (!housing) return <Navigate to="/404" />;
 
     return (
-        <section className="housing-content">
-            <HousingCard data={housing}/>
-        </section>
+    <section className="housing-content">
+        <Carousel pictures={housing.pictures} />
+        <div className="housing-main">
+            <div className="leftside">
+                <h2 className="housing-title">{housing.title}</h2>
+                <p className="location">{housing.location}</p>
+                <div className="tags-row">
+                    {housing.tags.map(tag =>
+                        <span key={tag} className="tags">{tag}</span>
+                    )}
+                </div>
+            </div>
+            <div className="rightside">
+                <div className="host">
+                    <span className="host-name">{housing.host.name}</span>
+                    <img className="host-img" src={housing.host.picture} alt="Portrait de l'hôte" />
+                </div>
+                <div className="notation">
+                    <Rating rating={housing.rating} />
+                </div>
+            </div>
+        </div>
+        <div className="housing-footer">
+            <div className="collapse-description">
+                <Collapse title="Description" content={housing.description} />
+            </div>
+            <div className="collapse-equipment">
+                <Collapse title="Equipements" content={housing.equipments} />
+            </div>
+        </div>
+    </section>
     )
 }
 export default Housing

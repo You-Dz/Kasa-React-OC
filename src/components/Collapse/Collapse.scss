@@ -1,14 +1,13 @@
 @use "../../styles/variables" as v;
 @use "../../styles/mixins" as m;
-
-.housing-collapse {
+.collapse {
     width: 100%;
 
     .collapse-header {
         width: 100%;
         @include m.flex-row(space-between,center);
-        background-color:v.$color-primary ;
-        font-size: v.$font-size-me;
+        background-color: v.$color-primary;
+        font-size: v.$font-size-md;
         color: v.$color-white;
         padding: v.$spacing-xs;
         border-radius: v.$radius-sm v.$radius-sm 5px 5px;

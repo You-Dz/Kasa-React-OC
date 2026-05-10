@@ -1,6 +1,6 @@
 @use "../../styles/variables" as v;
 @use "../../styles/mixins" as m;
-.home-card {
+.card {
     position: relative;
     border-radius: v.$radius-sm;
     overflow: hidden;
@@ -26,11 +26,11 @@
             
         );
     }
-    .home-card-img {
+    .card-img {
         height: 100%;
         @include m.img-cover;
     }
-    .home-card-title {
+    .card-title {
         position: absolute;
         bottom: v.$spacing-xs;
         left: v.$spacing-xs;

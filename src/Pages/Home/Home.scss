@@ -3,40 +3,25 @@
 
 .home-content {
     padding: v.$spacing-md 0px;
-
-    .banner {
-        width: 100%;
-        position: relative;
-        overflow: hidden;
-        border-radius: v.$radius-md;
-        box-shadow: v.$shadow;
-
+    .banner{
+        @include m.banner-overlay;
         .banner-slogan {
-            position: absolute;
-            inset: 0;
-            z-index: 2;
-            @include m.flex-row(center,center);
-            color: v.$color-white;
-            font-size: 48px;
-            font-weight: 700;
-            text-shadow:
-                -1px -1px 0 v.$color-black,
-                1px -1px 0 v.$color-black,
-                -1px  1px 0 v.$color-black,
-                1px  1px 0 v.$color-black;
+                position: absolute;
+                inset: 0;
+                z-index: 2;
+                @include m.flex-row(center,center);
+                color: v.$color-white;
+                font-size: 48px;
+                font-weight: 700;
+                text-shadow:
+                    -1px -1px 0 v.$color-black,
+                    1px -1px 0 v.$color-black,
+                    -1px  1px 0 v.$color-black,
+                    1px  1px 0 v.$color-black;
 
-            @media (max-width: v.$bp-mobile) {
-            font-size: v.$font-size-me;
-            }
-        }
-        &::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: v.$overlay-dark;
-            z-index: 1;
-            border-radius: inherit;
-            pointer-events: none;
+                @media (max-width: v.$bp-mobile) {
+                font-size: v.$font-size-md;
+                }
         }
         .banner-img {
             @include m.img-cover;
@@ -44,7 +29,9 @@
             height: 223px;
             border-radius:inherit;
         }
+        
     }
+
 
     .gallery {
         display: grid;

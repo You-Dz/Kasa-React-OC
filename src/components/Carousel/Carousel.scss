@@ -1,6 +1,15 @@
 @use "../../styles/variables" as v;
 @use "../../styles/mixins" as m;
 
+@keyframes slideFromRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to   { transform: translateX(0);    opacity: 1; }
+}
+
+@keyframes slideFromLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to   { transform: translateX(0);     opacity: 1; }
+}
 .carousel{
     position: relative;
     border-radius: v.$radius-md;
@@ -9,15 +18,6 @@
     max-height: 900px;
     width: 100%;
 
-    @keyframes slideFromRight {
-        from { transform: translateX(100%); opacity: 0; }
-        to   { transform: translateX(0);    opacity: 1; }
-    }
-
-    @keyframes slideFromLeft {
-        from { transform: translateX(-100%); opacity: 0; }
-        to   { transform: translateX(0);     opacity: 1; }
-    }
     .carousel-img{
         @include m.img-cover;
         object-position:center;

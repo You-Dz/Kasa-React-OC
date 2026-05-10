@@ -1,4 +1,4 @@
-import Collapse from "./Collapse"
+import Collapse from "../../components/Collapse/Collapse"
 import BannerAbout from "../../assets/images/img-about-source.webp"
 import "./About.scss"
 
@@ -6,7 +6,7 @@ function About () {
     return ( 
         <section className="about-content">
             <div className="about-banner">
-                <img src={BannerAbout} alt="Paysage de montagne enneigée et de forêt" className="about-banner-img"/>
+                <img src={BannerAbout} alt="Paysage de montagne enneigée et de forêt" className="about-banner-img" fetchPriority="high"/>
             </div>
 
             <div className="about-collapse">

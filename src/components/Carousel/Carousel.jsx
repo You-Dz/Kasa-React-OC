@@ -31,10 +31,13 @@ function Carousel ({pictures}) {
     return (
         <div className="carousel">
             <img 
-            key={index}
-            className={`carousel-img ${direction === "next" ? "slide-left" : direction === "prev" ? "slide-right" : ""}`}
-            src={pictures[index]} 
-            alt=""/>
+                key={index}
+                className={`carousel-img ${direction === "next" ? "slide-left" : direction === "prev" ? "slide-right" : ""}`}
+                src={pictures[index]} 
+                alt=""
+                fetchpriority={index === 0 ? "high" : "low"}
+                loading={index === 0 ? "eager" : "lazy"}
+            />
             {hasMultiple && (
                 <>
                     <button aria-label="Image précédente" className="left-btn carousel-btn" onClick={prev}>
