@@ -3,7 +3,7 @@ import PrevArrow from "../../assets/icons/prev-arrow.svg?react";
 import NextArrow from "../../assets/icons/next-arrow.svg?react";
 import "./Carousel.scss"
 
-function Carousel ({pictures}) {
+function Carousel ({pictures, title}) {
 
     const [index,setIndex] = useState(0);
     const hasMultiple = pictures.length > 1;
@@ -34,7 +34,7 @@ function Carousel ({pictures}) {
                 key={index}
                 className={`carousel-img ${direction === "next" ? "slide-left" : direction === "prev" ? "slide-right" : ""}`}
                 src={pictures[index]} 
-                alt=""
+                alt={`${title} - photo ${index + 1}`}
                 fetchpriority={index === 0 ? "high" : "low"}
                 loading={index === 0 ? "eager" : "lazy"}
             />

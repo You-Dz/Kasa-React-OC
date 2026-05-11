@@ -13,7 +13,7 @@ function Housing () {
 
     return (
     <section className="housing-content">
-        <Carousel pictures={housing.pictures} />
+        <Carousel pictures={housing.pictures} title={housing.title} />
         <div className="housing-main">
             <div className="leftside">
                 <h2 className="housing-title">{housing.title}</h2>
