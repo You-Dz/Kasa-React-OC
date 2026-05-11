@@ -9,7 +9,7 @@ function Housing () {
     const {id} = useParams()
     const housing = data.find(item => item.id ===id);
 
-    if (!housing) return <Navigate to="/404" />;
+    if (!housing) return <Navigate to="*" />;
 
     return (
     <section className="housing-content">

@@ -35,7 +35,7 @@ function Carousel ({pictures, title}) {
                 className={`carousel-img ${direction === "next" ? "slide-left" : direction === "prev" ? "slide-right" : ""}`}
                 src={pictures[index]} 
                 alt={`${title} - photo ${index + 1}`}
-                fetchpriority={index === 0 ? "high" : "low"}
+                fetchPriority={index === 0 ? "high" : "low"}
                 loading={index === 0 ? "eager" : "lazy"}
             />
             {hasMultiple && (
