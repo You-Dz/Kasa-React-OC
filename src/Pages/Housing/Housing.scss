@@ -14,6 +14,7 @@
 
         @media (max-width:v.$bp-mobile) {
             @include m.flex-col(flex-start,flex-start);
+            gap:5px;
         }
 
         .leftside {
@@ -43,6 +44,9 @@
             .tags-row {
                 display: flex;
                 gap: v.$spacing-sm;
+                @media (max-width:v.$bp-mobile){
+                    gap:v.$spacing-xs;
+                }
 
                 .tags {
                     color: v.$color-white;
@@ -53,6 +57,8 @@
 
                     @media (max-width:v.$bp-mobile) {
                         font-size: v.$font-size-xs;
+                        border-radius: v.$radius-sm;
+                        // padding:8px 12px;
                     }
                 }
             }
@@ -65,6 +71,7 @@
             @media (max-width:v.$bp-mobile) {
                 @include m.flex-row(space-between);
                 width: 100%;
+                gap: v.$spacing-xs;
             }
 
             .host {
@@ -73,6 +80,7 @@
 
                 @media (max-width:v.$bp-mobile) {
                     order: 2;
+                    gap: v.$spacing-xs;
                 }
 
                 .host-img {

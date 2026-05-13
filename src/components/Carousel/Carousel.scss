@@ -54,5 +54,8 @@
         left:50%;
         transform: translateX(-50%);
         color: v.$color-white;
+        @media (max-width:v.$bp-mobile){
+            display: none;
+        }
     }
 }

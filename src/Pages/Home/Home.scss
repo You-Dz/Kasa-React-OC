@@ -43,6 +43,8 @@
         border-radius: v.$radius-md;
         @media (max-width:v.$bp-mobile){
             grid-template-columns: 1fr;
+            background-color: v.$color-white;
+            padding: 0;
         }
     }
 
